@@ -1,0 +1,41 @@
+body{
+    background-color: rgb(22, 228, 22);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container{
+    text-align: center;
+    margin: 15%;
+    padding: 5%;
+    background-color: rgb(255, 255, 255);
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.momentosHumildes{
+    text-align: center;
+    margin: 5%;
+    padding: 5%;
+    background-color: rgb(255, 255, 255);
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.box-galery img{
+    display: block;
+    max-width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.momentosHumildes img{
+    display: flex;
+    max-width: 100%;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+}
+
+.story-container{
+    width: 40%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
