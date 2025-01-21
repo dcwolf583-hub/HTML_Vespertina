@@ -41,13 +41,27 @@ body {
 
 .momentosHumildes img {
   display: flex;
-  max-width: 50%;
+  max-width: 40%;
   flex-direction: row;
   flex-wrap: wrap;
   position: relative;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+}
+
+/*Estilos para las imagenes*/
+.image-columns {
+  display: flex; /* Activamos flexbox */
+  justify-content: space-between; /* Espacio entre columnas */
+  gap: 10px; /* Espaciado entre imágenes */
+}
+
+.image-columns img {
+  width: 50%; /* Cada imagen ocupa casi la mitad */
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /*Estilos para los acordeones*/
