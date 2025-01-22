@@ -15,9 +15,7 @@ $("#btnLogin").click(function() {
             title: "Error al ingresar",
             text: "Usuario o contraseña incorrecta",
           });
-    }else{
-        window.location.href = "ejercicio3.html";
-    }
+    }else{window.location.href = "ejercicio3.html";}
 });
 
 /*Mostrar nombre, correo y fecha */
