@@ -15,7 +15,7 @@ $("#btnLogin").click(function() {
             title: "Error al ingresar",
             text: "Usuario o contraseña incorrecta",
           });
-    }else{window.location.href = "ejercicio3.html";}
+    }else{window.location.href = "./dist/pages/index.html";}
 });
 
 /*Mostrar nombre, correo y fecha */
@@ -28,9 +28,17 @@ $("#btnEnviar").click(function() {
     var email = $("#txtCorreo").val();
     var fecha = $("#inpFechaYHora").val();
 
-    Swal.fire({
-        icon: "success",
-        title: "Datos del formulario",
-        html: "Bienvenido (a): " + nombreCompleto + "<br>Correo: " + email + "<br>Fecha de registro: " + fecha,
-      });
+    if(pNombre == "" || sNombre == "" || pApellido == "" || sApellido == "" || email == "" || fecha == ""){
+        Swal.fire({
+            icon: "error",
+            title: "Error al enviar",
+            text: "Todos los campos son obligatorios",
+          });
+          return;
+    } else {
+        Swal.fire({
+            icon: "success",
+            title: "Datos del formulario",
+            html: "Bienvenido (a): " + nombreCompleto + "<br>Correo: " + email + "<br>Fecha de registro: " + fecha,
+        }); }
 });

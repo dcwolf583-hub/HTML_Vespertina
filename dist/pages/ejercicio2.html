@@ -14,8 +14,8 @@
 		<div class="container h-100">
 			<div class="row justify-content-sm-center h-100">    
 				<div class="col-xxl-4 col-xl-5 col-lg-5 col-md-7 col-sm-9">
-					<div class="text-center my-5">
-						<img src="https://img.freepik.com/vector-premium/pagina-formulario-inicio-sesion-segura-contrasena-computadora-candado-icono-vectorial-3d-estilo-minimalista-dibujos-animados_365941-1119.jpg?semt=ais_hybrid" alt="logo" width="100">
+					<div class="text-center my-3">
+						<img src="https://www.ahm-honduras.com/brandsite-2017/images/logo-ahm.jpg" alt="300" width="250">
 					</div>
 					<div class="card shadow-lg">
 						<div class="card-body p-5">
@@ -38,10 +38,10 @@
 
 								<div class="d-flex align-items-center">
 									<div class="form-check">
-										<input type="checkbox" name="remember" id="remember" class="form-check-input">
+										<input style="background-color: #652D91" type="checkbox" name="remember" id="remember" class="form-check-input">
 										<label for="remember" class="form-check-label">Recuerdame</label>
 									</div>
-									<button id="btnLogin" type="button" class="btn btn-primary ms-auto">
+									<button style="background-color: #652D91" id="btnLogin" type="button" class="btn btn-primary ms-auto">
 										Iniciar sesión
 									</button>
 								</div>
@@ -72,6 +72,21 @@
     "></script>
     <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.15.10/dist/sweetalert2.min.css
     " rel="stylesheet">
-    <script src="dist/script/script.js"></script>
+    <script>
+		/*Login */
+		$("#btnLogin").click(function() {
+			var email = $("#txtEmail").val();
+			var password = $("#txtPassword").val();
+			var recordar = $("#chkRecordar").is(":checked");
+
+			if(email !="Daniel" || password != "AdminAHM123"){
+				Swal.fire({
+					icon: "error",
+					title: "Error al ingresar",
+					text: "Usuario o contraseña incorrecta",
+				});
+			}else{window.location.href = "index.html";}
+		});
+	</script>
 </body>
 </html>
