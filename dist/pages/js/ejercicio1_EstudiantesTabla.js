@@ -39,6 +39,19 @@ function ingresar() {
     
             /* Calcular promedio */
             var promedio = (Number(nota1) + Number(nota2) + Number(nota3)) / 3;
+
+            /*Si el promedio es mayor a 70 ha aprobado de lo contrario, reprueba */
+            if (promedio >= 70) {
+                iziToast.success({
+                    title: 'Exito',
+                    message: 'El estudiante ha aprobado.'
+                });
+            } else {
+                iziToast.error({
+                    title: 'Error',
+                    message: 'El estudiante ha reprobado.'
+                });
+            }
     
                 /* Fila e imprimir en pantalla*/
                 var fila = `<tr>
