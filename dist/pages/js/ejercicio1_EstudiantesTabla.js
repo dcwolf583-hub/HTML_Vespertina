@@ -1,3 +1,6 @@
+/* DataTable */
+$("#tblEstudiantes").DataTable();
+
 /* Funcion para limpiar */
 function limpiar() {
     $('#txtNombres').val("");
@@ -7,6 +10,7 @@ function limpiar() {
     $('#txtNota1').val("");
     $('#txtNota2').val("");
     $('#txtNota3').val("");
+    $('#txtPromedio').val("");
 }
 
 /*Limpiar controles */
@@ -50,7 +54,7 @@ function ingresar() {
                 iziToast.error({
                     title: 'Error',
                     message: 'El estudiante ha reprobado.'
-                });
+                }); 
             }
     
                 /* Fila e imprimir en pantalla*/
