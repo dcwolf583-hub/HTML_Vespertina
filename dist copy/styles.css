@@ -1,0 +1,77 @@
+/*comentario de prueba XD*/
+
+body {
+  background-color: rgb(22, 228, 22);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: larger;
+}
+
+h1{
+  text-align: center;
+}
+
+.container {
+  text-align: center;
+  margin: 2.5%;
+  padding: 3%;
+  background-color: rgb(255, 255, 255);
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.momentosHumildes {
+  text-align: justify;
+  margin: 1%;
+  padding: 1%;
+  background-color: rgb(255, 255, 255);
+  max-width: 100%;
+  max-height: 100%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.box-galery img {
+  display: flex;
+  max-width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.momentosHumildes img {
+  display: flex;
+  max-width: 40%;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  position: relative;
+}
+
+/*Estilos para las imagenes*/
+.image-columns {
+  display: flex; /* Activamos flexbox */
+  justify-content: space-between; /* Espacio entre columnas */
+  gap: 10px; /* Espaciado entre imágenes */
+}
+
+.image-columns img {
+  width: 50%; /* Cada imagen ocupa casi la mitad */
+  border: 6px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: scale(var(--escala, 1));
+  transition: transform 0.25s;
+}
+
+.image-columns img:hover{
+  --escala: 1.2;
+  cursor:pointer;
+}
+
+/*Estilos para los acordeones*/
+details {
+  padding: 0.5%;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: bold;
+}
