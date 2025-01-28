@@ -1,6 +1,11 @@
 /* DataTable */
 $("#tblEstudiantes").DataTable();
 
+/* Mostrar modal */
+$('#btnNuevo').click(function () {
+    $('#modalEstudiante').modal('show');
+});
+
 /* Funcion para limpiar */
 function limpiar() {
     $('#txtNombres').val("");
@@ -36,13 +41,15 @@ function ingresar() {
             });
             return;
         } else {
+
+            /* Calcular promedio */
+            var promedio = (Number(nota1) + Number(nota2) + Number(nota3)) / 3;
+
             iziToast.success({
                 title: 'Exito',
                 message: 'Los datos se guardaron correctamente'
             });
-    
-            /* Calcular promedio */
-            var promedio = (Number(nota1) + Number(nota2) + Number(nota3)) / 3;
+
 
             /*Si el promedio es mayor a 70 ha aprobado de lo contrario, reprueba */
             if (promedio >= 70) {

@@ -20,58 +20,13 @@
                         <h2>Registro de Estudiantes</h2>
                     </div>
                     <div class="card-body">
-                        <div class="form">
-                            <!-- Datos personales -->
-                            <div class="row">
-                                <div class="col-sm-5">
-                                    <label for="">Nombres:</label>
-                                    <input type="text" id="txtNombres" class="form-control">
-                                </div>
-                                <div class="col-sm-5">
-                                    <label for="">Apellidos:</label>
-                                    <input type="text" id="txtApellidos" class="form-control">
-                                </div>
-                                <div class="col-sm-2">
-                                    <label for="">Edad:</label>
-                                    <input type="number" id="txtEdad" class="form-control">
-                                </div>
-                            </div> <br>
-                            <!-- Notas y promedio -->
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <label for="">Nota 1:</label>
-                                    <input type="number" id="txtNota1" class="form-control">
-                                </div>
-                                <div class="col-sm-3">
-                                    <label for="">Nota 2:</label>
-                                    <input type="number" id="txtNota2" class="form-control">
-                                </div>
-                                <div class="col-sm-3">
-                                    <label for="">Nota 3:</label>
-                                    <input type="number" id="txtNota3" class="form-control">
-                                </div>
-                                <div class="col-sm-3">
-                                    <label for="">Promedio:</label>
-                                    <input type="number" id="txtPromedio" class="form-control" disabled>
-                                </div>
-                            </div> <br>
-                            <!-- Sexo -->
-                            <div class="form-row">
-                                <label for="rbSexo">Sexo:</label>
-                                <input type="radio" name="rbSexo" value="Femenino">F
-                                <input type="radio" name="rbSexo" value="Masculino">M
-                            </div>
-                            <div class="form-row">
-                                <button class="btn btn-success" id="btnGuardar">Guardar</button>
-                                <button class="btn btn-warning" id="btnLimpiar">Limpiar</button>
-                            </div>
-                        </div>
+                        <button id="btnNuevo" type="button" class="btn btn-success">Nuevo</button>
                     </div>
                     <div class="card">
                         <div class="card-body">
                             <!-- Tabla de registro -->
                             <h4>Estudiantes</h4>
-                            <table class="table table-respponsive table-bordered" id="tblEstudiantes">
+                            <table class="table table-striped table-bordered" id="tblEstudiantes">
                                 <thead>
                                     <tr>
                                         <th scope="col">Nombres</th>
@@ -103,6 +58,67 @@
             </div>
         </div>
     </div>
+
+    <!-- modal -->
+    <div id="modalEstudiante" class="modal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Ingresar Estudiante</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="form">
+                    <!-- Datos personales -->
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <label for="">Nombres:</label>
+                            <input type="text" id="txtNombres" class="form-control">
+                        </div>
+                        <div class="col-sm-5">
+                            <label for="">Apellidos:</label>
+                            <input type="text" id="txtApellidos" class="form-control">
+                        </div>
+                        <div class="col-sm-2">
+                            <label for="">Edad:</label>
+                            <input type="number" id="txtEdad" class="form-control">
+                        </div>
+                    </div> <br>
+                    <!-- Notas y promedio -->
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <label for="">Nota 1:</label>
+                            <input type="number" id="txtNota1" class="form-control">
+                        </div>
+                        <div class="col-sm-3">
+                            <label for="">Nota 2:</label>
+                            <input type="number" id="txtNota2" class="form-control">
+                        </div>
+                        <div class="col-sm-3">
+                            <label for="">Nota 3:</label>
+                            <input type="number" id="txtNota3" class="form-control">
+                        </div>
+                        <div class="col-sm-3">
+                            <label for="">Promedio:</label>
+                            <input type="number" id="txtPromedio" class="form-control" disabled>
+                        </div>
+                    </div> <br>
+                    <!-- Sexo -->
+                    <div class="form-row">
+                        <label for="rbSexo">Sexo:</label>
+                        <input type="radio" name="rbSexo" value="Femenino">F
+                        <input type="radio" name="rbSexo" value="Masculino">M
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-success" id="btnGuardar">Guardar</button>
+                <button class="btn btn-warning" id="btnLimpiar">Limpiar</button>
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
     
 
     <!-- Option 1: Bootstrap Bundle with Popper -->

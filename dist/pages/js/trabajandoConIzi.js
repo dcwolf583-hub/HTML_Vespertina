@@ -2,6 +2,13 @@
 $("#tblSalarios").DataTable(); 
 
 /*variables */
+$("#btnNuevo").click(function () {
+    $("#modalSalario").modal("show");
+});
+
+$("#btnCerrar").click(function () { 
+    $("#modalSalario").modal("hide");
+});
 
 $("#btnGuardar").click(function () {
     var nombre = $("#txtNombre").val();
@@ -34,6 +41,9 @@ $("#btnGuardar").click(function () {
              /* Resultados */
              var nuevoTR = "<tr><td>" + num + "</td><td>" + nombre + "</td><td>" + salario + "</td><td>" + aumento + "</td><td>" + sexo + "</td></tr>";
              $("#tblSalarios").append(nuevoTR);
+             $("#txtNombre").val("");
+             $("#txtSalario").val("");
+             num++;
         }
     }
 });

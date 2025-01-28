@@ -20,33 +20,7 @@
                         <h2>Calificaciones segun promedio</h2>
                     </div>
                     <div class="card-body">
-                        <div class="form">
-                            <!-- Datos personales -->
-                            <div class="row">
-                                <div class="col-sm-5">
-                                    <label for="">Nombres:</label>
-                                    <input type="text" id="txtNombres" class="form-control">
-                                </div>
-                                <div class="col-sm-5">
-                                    <label for="">Apellidos:</label>
-                                    <input type="text" id="txtApellidos" class="form-control">
-                                </div>
-                                <div class="col-sm-2">
-                                    <label for="">Promedio:</label>
-                                    <input type="number" id="txtPromedio" class="form-control">
-                                </div>
-                            </div> <br>
-                            <!-- Sexo -->
-                            <div class="form-row">
-                                <label for="rbSexo">Sexo:</label>
-                                <input type="radio" name="rbSexo" value="Femenino">F
-                                <input type="radio" name="rbSexo" value="Masculino">M
-                            </div>
-                            <div class="form-row">
-                                <button class="btn btn-success" id="btnGuardar">Guardar</button>
-                                <button class="btn btn-warning" id="btnLimpiar">Limpiar</button>
-                            </div>
-                        </div>
+                        <button id="btnNuevo" type="button" class="btn btn-primary">Nuevo</button>
                     </div>
                     <div class="card">
                         <div class="card-body">
@@ -79,6 +53,50 @@
         </div>
     </div>
     
+    <!-- Modal -->
+    <div id="modalEstudiante" class="modal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Modal title</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="form">
+                    <!-- Datos personales -->
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <label for="">Nombres:</label>
+                            <input type="text" id="txtNombres" class="form-control">
+                        </div>
+                        <div class="col-sm-5">
+                            <label for="">Apellidos:</label>
+                            <input type="text" id="txtApellidos" class="form-control">
+                        </div>
+                        <div class="col-sm-2">
+                            <label for="">Promedio:</label>
+                            <input type="number" id="txtPromedio" class="form-control">
+                        </div>
+                    </div> <br>
+                    <!-- Sexo -->
+                    <div class="form-row">
+                        <label for="rbSexo">Sexo:</label>
+                        <input type="radio" name="rbSexo" value="Femenino">F
+                        <input type="radio" name="rbSexo" value="Masculino">M
+                    </div>
+                    <br>
+                </div>
+            </div>
+            <div class="modal-footer">
+              <div class="form-row">
+                <button class="btn btn-success" id="btnGuardar">Guardar</button>
+                <button class="btn btn-warning" id="btnLimpiar">Limpiar</button>
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

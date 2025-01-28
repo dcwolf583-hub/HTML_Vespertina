@@ -1,6 +1,9 @@
 /* DataTable */
 $("#tblEstudiantes").DataTable();
 
+/* Mostrar modal */
+$('#btnNuevo').click(function () {$('#modalEstudiante').modal('show');});
+
 /* Funcion para limpiar */
 function limpiar() {
     $('#txtNombres').val("");
@@ -68,6 +71,9 @@ function ingresar() {
 
                 /* Limpiar controles */
                 limpiar();
+
+                /* ocultar modal */
+                $('#modalEstudiante').modal('hide');
 
             } else { /*MEhsaje*/ iziToast.error({title: 'Error', message: 'El promedio debe estar entre 0 y 10'}); return; }
         }

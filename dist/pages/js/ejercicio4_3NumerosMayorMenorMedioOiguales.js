@@ -1,6 +1,5 @@
 /* datatable */
 $("#tblOperaciones").DataTable();
-
 /* Funciones */
 function limpiar() {
     $('#txtNum1').val("");
@@ -21,7 +20,7 @@ function calcular() {
     var medio = arrNumeros.find(n => n !== mayor && n !== menor);
 
         /* validar */
-        if (num1 == "" || num2 == "" || num3 == "" || num1 == null || num2 == null  || num3 == null || isNaN(num1) || isNaN(num2) || isNaN(num3)) {
+    if (num1 == "" || num2 == "" || num3 == "" || num1 == null || num2 == null  || num3 == null || isNaN(num1) || isNaN(num2) || isNaN(num3)) {
             /* Mensaje */
             iziToast.error({title: 'Error', message: 'Todos los campos son obligatorios',});
             return;
@@ -44,16 +43,16 @@ function calcular() {
         return;
     } else if (num1 == num2) {
             /* mensaje */
-            iziToast.info({ title: 'Correcto', message: 'El numero ' + num1 + ' y el numero ' + num2 + ' son iguales' });
+            iziToast.info({ title: 'Correcto', message: 'El numero 1: ' + num1 + ' y el numero 2:' + num2 + ' son iguales' });
 
             /* Agregar a la tabla mediante la funcion add de datatable */
             $("#tblOperaciones").DataTable().row.add([
-                mayor, medio, menor, 'El número ' + num1 + ' y el número ' + num2 + ' son iguales'
+                mayor, medio, menor, 'El número 1:' + num1 + ' y el número 2:' + num2 + ' son iguales'
             ]).draw();
             return;
         } else if (num1 == num3) {
             /* mensaje */
-            iziToast.info({ title: 'Correcto', message: 'El numero ' + num1 + ' y el numero ' + num3 + ' son iguales' });
+            iziToast.info({ title: 'Correcto', message: 'El numero 1:' + num1 + ' y el numero 3:' + num3 + ' son iguales' });
             /* Agregar a la tabla mediante la funcion add de datatable */
             $("#tblOperaciones").DataTable().row.add([
                 mayor, medio, menor, 'El número ' + num1 + ' y el número ' + num3 + ' son iguales'
@@ -61,7 +60,7 @@ function calcular() {
             return;
         } else if (num2 == num3) {
             /* mensaje */
-            iziToast.info({ title: 'Correcto', message: 'El numero ' + num2 + ' y el numero ' + num3 + ' son iguales' });
+            iziToast.info({ title: 'Correcto', message: 'El numero 2: ' + num2 + ' y el numero 3: ' + num3 + ' son iguales' });
             /* Agregar a la tabla mediante la funcion add de datatable */
             $("#tblOperaciones").DataTable().row.add([
                 mayor, medio, menor, 'El número ' + num2 + ' y el número ' + num3 + ' son iguales'

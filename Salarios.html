@@ -20,26 +20,7 @@
                         <h2>Formulario de Salarios</h2>
                     </div>
                     <div class="card-body">
-                        <div class="form">
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <label for="">Nombre Completo:</label>
-                                    <input type="text" id="txtNombre" class="form-control">
-                                </div>
-                                <div class="col-sm-6">
-                                    <label for="">Salario:</label>
-                                    <input type="number" id="txtSalario" class="form-control">
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <label for="rbSexo">Sexo:</label>
-                                <input type="radio" name="rbSexo" value="Femenino">F
-                                <input type="radio" name="rbSexo" value="Masculino">M
-                            </div>
-                            <div class="form-row">
-                                <button class="btn btn-success" id="btnGuardar">Guardar</button>
-                            </div>
-                        </div>
+                        <button id="btnNuevo" type="button" class="btn btn-primary">Nuevo</button>
                     </div>
                     <div class="card">
                         <div class="card-body">
@@ -69,6 +50,41 @@
             </div>
         </div>
     </div>
+
+    <!-- Modal -->
+    <div id="modalSalario" class="modal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Modal title</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="form">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label for="">Nombre Completo:</label>
+                            <input type="text" id="txtNombre" class="form-control">
+                        </div>
+                        <div class="col-sm-6">
+                            <label for="">Salario:</label>
+                            <input type="number" id="txtSalario" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <label for="rbSexo">Sexo:</label>
+                        <input type="radio" name="rbSexo" value="Femenino">F
+                        <input type="radio" name="rbSexo" value="Masculino">M
+                    </div> <br>
+                </div>
+            </div>
+            <div class="modal-footer">
+              <button id="btnCerrar" type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+              <button class="btn btn-success" id="btnGuardar">Guardar</button>
+            </div>
+          </div>
+        </div>
+      </div>
     
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
